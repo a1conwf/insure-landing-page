@@ -1,0 +1,64 @@
+@import "../../scss/variables";
+@import "../../scss/mixins";
+
+//footer
+.footer {
+	padding: 90px 0;
+	background: url("../../assets/svg/bg-pattern-footer-mobile.svg") no-repeat top left;
+	background-size: contain;
+	background-color: $almostWhite;
+	text-align: center;
+
+	//footer header
+	&__header {
+		margin-bottom: 40px;
+		@include flex(center, center);
+		gap: 32px;
+		flex-direction: column;
+		border-bottom: 1px solid #dadada;
+
+		//socials
+		&-socials {
+			padding-bottom: 40px;
+			@include flex(flex-start, center);
+			gap: 16px;
+
+			& li a img {
+				filter: invert(53%) sepia(8%) saturate(365%) hue-rotate(230deg) brightness(92%) contrast(85%);
+			}
+
+			& li a img:hover {
+				filter: invert(15%) sepia(10%) saturate(658%) hue-rotate(227deg) brightness(92%) contrast(95%);
+			}
+		}
+	}
+}
+
+@include md {
+	//footer
+	.footer {
+		padding: 64px 0;
+		background: url("../../assets/svg/bg-pattern-footer-desktop.svg") no-repeat top left, $almostWhite;
+		background-size: 40%;
+		text-align: left;
+
+		//footer header
+		&__header {
+			padding-bottom: 36px;
+			@include flex(space-between, center);
+			gap: 0;
+			flex-direction: row;
+
+			//socials
+			&-socials {
+				padding-bottom: 0;
+			}
+		}
+
+		//footer nav
+		&__nav {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+		}
+	}
+}

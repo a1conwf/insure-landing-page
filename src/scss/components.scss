@@ -1,0 +1,24 @@
+//cta btn
+.cta__btn {
+	display: inline-block;
+	min-width: rem(160);
+	padding: 12px 0;
+	font-size: rem(13);
+	line-height: rem(15);
+	letter-spacing: 1.5px;
+	font-weight: 700;
+	text-transform: uppercase;
+	text-align: center;
+
+	//light
+	&.light {
+		border: 1.5px solid $white;
+		color: $white;
+		transition: all 0.3s ease;
+
+		&:hover {
+			background-color: $white;
+			color: $violet;
+		}
+	}
+}

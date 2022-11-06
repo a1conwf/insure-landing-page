@@ -1,0 +1,25 @@
+@import "../../../scss/variables";
+
+//feature
+.feature {
+	margin-bottom: 56px;
+
+	//img
+	&__img {
+		margin-bottom: 32px;
+	}
+
+	//title
+	&__title {
+		margin-bottom: 16px;
+	}
+
+	//text
+	&__text {
+		color: $grayishViolet;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}

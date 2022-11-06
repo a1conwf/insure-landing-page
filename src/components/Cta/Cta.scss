@@ -1,0 +1,36 @@
+@import "../../scss/variables";
+@import "../../scss/layout";
+@import "../../scss/mixins";
+
+//cta
+.cta {
+	padding: 72px 0;
+	margin-bottom: 140px;
+	text-align: center;
+	background: url("../../assets/svg/bg-pattern-how-we-work-mobile.svg") no-repeat top right;
+	color: $white;
+	background-color: $violet;
+
+	//title
+	&__title {
+		margin-bottom: 40px;
+	}
+}
+
+@include md {
+	//cta
+	.cta {
+		padding: 69px 80px;
+		margin-bottom: 150px;
+		@include flex(space-between, center);
+		text-align: left;
+		background: $violet url("../../assets/svg/bg-pattern-how-we-work-desktop.svg") no-repeat top right;
+		background-size: contain;
+		color: $white;
+
+		//title
+		&__title {
+			margin-bottom: 0;
+		}
+	}
+}

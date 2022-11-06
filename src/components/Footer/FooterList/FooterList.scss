@@ -1,0 +1,51 @@
+@import "../../../scss/functions";
+@import "../../../scss/variables";
+@import "../../../scss/mixins";
+
+//footer list
+.footer__nav-list {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	text-transform: uppercase;
+	font-size: rem(13);
+	font-weight: 700;
+	line-height: rem(15);
+	letter-spacing: 1.5px;
+	margin-bottom: 40px;
+
+	//last footer list
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	//list name
+	&-name {
+		color: $grayishViolet;
+		margin-bottom: 36px;
+	}
+
+	//list item
+	&-item a {
+		color: $violet;
+
+		&:hover {
+			border-bottom: 1px solid $violet;
+		}
+	}
+}
+
+@include md {
+	//footer list
+	.footer__nav-list {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+		text-transform: uppercase;
+		font-size: rem(13);
+		font-weight: 700;
+		line-height: rem(15);
+		letter-spacing: 1.5px;
+		margin-bottom: 0;
+	}
+}
